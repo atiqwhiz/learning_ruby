@@ -1,0 +1,9 @@
+a=[-2,32,43,12,435,54]
+previous=a[0]
+middle=a[0]>a[1]?a[0]:a[1]
+2.upto(a.size-1).each |i|
+   current=middle> previous+a[i]?middle:previous+a[i]
+   previous=middle
+   middle=current
+end
+puts middle
